@@ -1,0 +1,526 @@
+/* nejsme vcerejsi, pouzivame moderni box model */
+*, ::after, ::before { box-sizing: border-box; }
+
+/*
+ BARVY
+ pozadi           #f5f5f5
+ dekorace nadpisů #629edb
+*/
+
+/* MOBIL */
+body {
+    background-color: #f5f5f5;
+    font-family: 'Merriweather', serif;
+    font-size: 16px;
+    line-height: 1.6;
+    width: 100%;
+}
+
+/* HLAVICKA */
+
+.top {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url(island-hlavicka.jpg);
+    background-size: cover;
+    background-position: center;
+    color:white;
+    width: 100%;
+}
+
+.titulek {
+    font-family: 'Raleway', serif;
+    text-align: center;
+    font-size: 3rem;
+    margin-top: 5px;
+}
+
+.perex {
+    text-align: center;
+    width: 100%;
+    padding-left: 20px;
+    padding-right:20px;
+    margin-top: -30px;
+    
+}
+
+.autor::before {
+    width: 15%;
+    height: 2px;
+    content: '\a0';
+    background-color: gainsboro;
+    display: block; 
+    overflow: hidden; 
+    border-style: inset; 
+    border-width: 1px;
+    margin: 0 auto;
+}
+
+.autor {
+    text-align: center;
+    color:gainsboro;
+}
+
+/* MENU */
+
+.menu {
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    padding: 0;
+}
+
+.menu li {
+    list-style-type: none;
+}
+
+.menu a {
+display: block;
+text-decoration: none;
+margin: 5px;
+color: rgb(183, 184, 184);
+border-bottom: 0.5px solid rgb(183, 184, 184);
+}
+
+li a {
+    text-decoration: none;
+    color: gray;
+    font-family: "Raleway";
+}
+
+/* OBSAH */
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    padding-left: 10px
+}
+
+body img {
+    width: 100%;
+}
+    
+.popisekmimogalerii {
+    text-align: center;
+    font-size: 0.75rem;
+    color: grey;
+    margin-top: 1px;
+}
+
+.popisekmimogalerii a {
+    color:gray;
+}
+
+h2 {
+    text-align: left;
+    padding: 15px;
+    font-family: "Raleway";
+}
+
+h2::after {
+    width: 22%;
+    border-bottom: 4px solid #629dde;
+    position: absolute;
+    content: "";
+    margin-left: -220px;
+    padding-bottom: 50px;
+}
+
+.why,
+.poloostrov,
+.skogafoss {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    padding-left: 10px
+}
+
+
+/* FOTOGALERIE */
+.galerie {
+    width: 100%;
+}
+
+.foto {
+    display: flex;
+    flex-direction: column;
+    border-bottom: hidden;
+}
+
+.foto img {
+    width: 125%;
+}
+
+.foto .popisek::first-line {
+    font-weight: bold;
+}
+
+.popisekvgalerii {
+    text-align: center;
+    font-size: 0.75rem;
+    color: lightgray;
+    font-family: "Raleway";
+   
+    padding-bottom: 20px;
+}
+
+.popisekvgalerii::first-line {
+    font-weight: bold;
+    font-size: 1rem
+}
+.popisekvgalerii a {
+    color: lightgray;
+}
+
+/* PATICKA */
+
+footer {
+    display: flex;
+    flex-direction: column;
+    background:linear-gradient(to top, #f5f5f5 80%, #d8d8d8); 
+    font-size: 0.5rem;
+    padding-top: 20px;
+    width: 125%;
+    margin-left: -10px;
+}
+
+footer p {
+    font-weight: bold;
+    color: #adb6bb;
+    padding-left: 10px;
+}
+
+footer p a {
+    color: #adb6bb;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* TABLET */
+
+@media only screen and (min-width: 500px)  and (max-width: 1000px) {
+
+    /* HLAVICKA */
+
+.perex {
+    padding-right: 40px;
+}
+
+    /* MENU */
+   
+    .menu {
+        display:flex;
+        flex-direction: row;
+        justify-content: center;
+        margin: 0 auto;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 10px;
+        
+    }
+    
+    .menu li {
+        display: inline-block;
+        margin: 0;
+    }
+  
+    .menu a {
+    width: 200px;
+    border: 0.5px solid rgb(183, 184, 184);
+    margin: 0;
+    }
+        
+    /* OBSAH */
+    
+    .popisekmimogalerii {
+        text-align: right;
+        padding-right: 40px;
+        margin-top: -30px;
+        color:lightgray;
+    }
+
+    .popisekmimogalerii a {
+        color: lightgray;
+    }
+
+        
+    h2::after {
+        margin-left: -300px;
+    }
+
+    /* FOTOGALERIE */
+     
+    .galerie {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .obrazekjedna,
+    .obrazekdva,
+    .obrazektri,
+    .obrazekctyri,
+    .obrazekpet,
+    .obrazeksest,
+    .obrazeksedm,
+    .obrazekosm,
+    .obrazekdevet {
+    position: relative;
+    display: inline-block;
+    width: 50%;
+    }
+
+    .obrazekjedna figcaption,
+    .obrazekdva figcaption,
+    .obrazektri figcaption,
+    .obrazekctyri figcaption,
+    .obrazekpet figcaption,
+    .obrazeksest figcaption,
+    .obrazeksedm figcaption,
+    .obrazekosm figcaption,
+    .obrazekdevet figcaption {
+        opacity: 0;
+        color:lightgray;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        padding-right: 15px;
+        padding-bottom: 15px;
+    }
+
+    .obrazekjedna img,
+    .obrazekdva img,
+    .obrazektri img,
+    .obrazekctyri img,
+    .obrazekpet img,
+    .obrazeksest img,
+    .obrazeksedm img,
+    .obrazekosm img,
+    .obrazekdevet img {
+        display:block;
+    }
+  
+    .obrazekjedna:hover figcaption,
+    .obrazekdva:hover figcaption,
+    .obrazektri:hover figcaption,
+    .obrazekctyri:hover figcaption,
+    .obrazekpet:hover figcaption,
+    .obrazeksest:hover figcaption,
+    .obrazeksedm:hover figcaption,
+    .obrazekosm:hover figcaption,
+    .obrazekdevet:hover figcaption {
+        opacity: 1;
+    }
+
+    .galerie:hover img {
+        transform: scale(1.2);
+        transition: transform 500ms ease 0s;
+    }
+}
+
+
+
+
+
+    /* DESKTOP */
+
+    @media only screen and (min-width: 1000px) {
+  
+        /* HLAVICKA */
+        .top {
+          width: 100%;
+          height: 400px;
+        }
+      
+        .titulek {
+            font-size: 4rem;        
+        }
+    
+        .perex {
+            width: 50%;
+            margin: 0 auto;
+            padding: 0;
+            padding-bottom: 30px;
+        }
+        
+        .autor {
+            width: 50%;
+            margin: 0 auto;
+            padding: 0;
+        }
+        
+        .content {
+            position: absolute;
+            top: 350px;
+            left: 0;
+            right: 0;
+            width: 60%;
+            max-width: 960px;
+            box-shadow: 5px 10px 8px 3px #777676;
+            background-color: white;
+            margin: 0 auto;
+        }
+    
+        /* MENU */
+    
+        .menuaintro {
+            display: flex;
+            flex-direction: row;
+        }
+        
+        .menu {
+            text-align: left;
+            padding-top: 30px;
+        }
+            
+        .menu li {
+            padding-left: 20px;
+        }
+    
+        .menu a {
+            min-width: 200px;
+            }
+    
+        
+        /* OBSAH */
+    
+        .intro {
+            text-align: left;
+            padding-left: 25px;
+            padding-right: 25px;
+            padding-top: 30px;
+        }
+
+        .popisekmimogalerii {
+            text-align: right;
+            padding-right: 40px;
+            margin-top: -30px;
+            color: lightgray;
+        }
+
+        .popisekmimogalerii a {
+            color: lightgray;
+        }
+        
+        h2 {
+            text-align: left;
+            position: relative;
+            padding: 15px;
+            font-family: "Raleway";
+        }
+        
+        h2::after {
+            width: 10%;
+            border-bottom: 4px solid #629dde;
+            position: absolute;
+            content: "";
+            bottom: -10px;
+            left: 220px
+        }
+        
+        .why {
+            text-align: left;
+            padding: 20px;
+            padding-top: 35px;
+            padding-right: 180px;
+        }
+    
+        .comusite {
+            padding-left: 250px;
+        }
+    
+        /* FOTOGALERIE */
+        
+        .galerie {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .obrazekjedna,
+        .obrazekdva,
+        .obrazektri,
+        .obrazekctyri,
+        .obrazekpet,
+        .obrazeksest,
+        .obrazeksedm,
+        .obrazekosm,
+        .obrazekdevet {
+        width: 33.3%;
+        position: relative;
+        }
+    
+        .obrazekjedna figcaption,
+        .obrazekdva figcaption,
+        .obrazektri figcaption,
+        .obrazekctyri figcaption,
+        .obrazekpet figcaption,
+        .obrazeksest figcaption,
+        .obrazeksedm figcaption,
+        .obrazekosm figcaption,
+        .obrazekdevet figcaption {
+            
+            color:lightgray;
+            font-weight: bold;
+            display: none;
+            transform: translate(100px);
+            text-align: center;
+        }
+    
+        .obrazekjedna img,
+        .obrazekdva img,
+        .obrazektri img,
+        .obrazekctyri img,
+        .obrazekpet img,
+        .obrazeksest img,
+        .obrazeksedm img,
+        .obrazekosm img,
+        .obrazekdevet img {
+            display:block;
+        }
+      
+        .obrazekjedna:hover figcaption,
+        .obrazekdva:hover figcaption,
+        .obrazektri:hover figcaption,
+        .obrazekctyri:hover figcaption,
+        .obrazekpet:hover figcaption,
+        .obrazeksest:hover figcaption,
+        .obrazeksedm:hover figcaption,
+        .obrazekosm:hover figcaption,
+        .obrazekdevet:hover figcaption {
+            display:flex;
+            flex-direction: column;
+            margin: 0 auto;
+            transform: translate(-25px);
+            margin-top: -30px
+            
+        }
+    
+        .galerie:hover img {
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            transform: scale(1.2);
+        }
+
+       
+    
+        /* PATICKA */
+        footer {
+            width: 100%;
+            margin: 0 auto;
+        }
+    }
